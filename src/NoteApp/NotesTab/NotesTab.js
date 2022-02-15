@@ -3,7 +3,7 @@ import React from 'react';
 import Note from './Note';
 import NoteEditor from './NoteEditor';
 
-import {Button} from './Utils';
+import {Button} from '../Utils';
 
 
 
