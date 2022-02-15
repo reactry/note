@@ -1,9 +1,10 @@
 import Notebook from './Notebook';
+import NotebookEditor from './NotebookEditor';
 
 
 
 export default function NotebooksTab ({
-	notebooks
+	notebooks, setNotebooks
 }) {
 
 	let notebookItems = notebooks.map((notebook, i) => {

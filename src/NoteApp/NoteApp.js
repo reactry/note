@@ -26,19 +26,19 @@ export default function NoteApp () {
 		let currentTabTitle = tabs[currentTabIndex]["title"];
 		if (currentTabTitle === "Notes") {
 			let notesTabProps = {
-				notes
+				notes, setNotes
 			};
 			return <NotesTab {...notesTabProps} />;
 		} else if (currentTabTitle === "Notebooks") {
 			let notebooksTabProps = {
-				notebooks
+				notebooks, setNotebooks
 			};
 			return <NotebooksTab {...notebooksTabProps} />;
 		}
 	}
 
 	return (
-		<div className="NoteApp bg-slate-100">
+		<div className="NoteApp bg-slate-300">
 
 			<TopTabBar {...topTabBarProps} />
 
