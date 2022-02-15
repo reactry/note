@@ -32,7 +32,9 @@ export default function NotesTab ({
 			</div>
 			<div className="py-4">
 				<h2 className="py-2">{notes.length} notes found</h2>
-				<div className="flex">{noteItems}</div>
+				<div className="flex flex-wrap">
+					{noteItems}
+				</div>
 			</div>
 		</div>
 	);

@@ -6,7 +6,7 @@ export default function Note ({
 }) {
 
 	return (
-		<div className="Note px-4 py-4 bg-slate-50 mb-4 mr-4 w-64 max-w-sm rounded shadow">
+		<div className="Note px-4 py-4 bg-slate-50 mb-6 mr-4 w-64 max-w-sm rounded shadow">
 			<h2>{note.title}</h2>
 			<p>{note.content}</p>
 		</div>

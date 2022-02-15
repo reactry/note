@@ -3,7 +3,7 @@
 export function Button ({onClick, children}) {
 	return (
 		<div className="">
-			<button onClick={onClick} className="bg-blue-500 text-white px-4 py-2">{children}</button>
+			<button onClick={onClick} className="font-bold text-base bg-blue-500 border-2 border-blue-800 text-white px-4 py-2 duration-300 hover:bg-blue-700">{children}</button>
 		</div>
 	);
 }
