@@ -1,4 +1,4 @@
-import ExternalLink from './Utils';
+import {ExternalLink} from './Utils';
 
 
 
