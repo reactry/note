@@ -32,7 +32,7 @@ export default function NotesTab ({
 			</div>
 			<div className="py-4">
 				<h2 className="py-2">{notes.length} notes found</h2>
-				<div>{noteItems}</div>
+				<div className="flex">{noteItems}</div>
 			</div>
 		</div>
 	);
