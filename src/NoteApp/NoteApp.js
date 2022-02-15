@@ -18,17 +18,30 @@ export default function NoteApp () {
 
 	const [currentTabIndex, setCurrentTabIndex] = React.useState(0);
 
-	let noteItems = notes.map((note, i) => {
-		return <Note key={i} note={note} />;
-	});
-
-	let notebookItems = notebooks.map((notebook, i) => {
-		return <Notebook key={i} notebook={notebook} />;
-	});
-
 	const topTabBarProps = {
 		tabs, currentTabIndex, setCurrentTabIndex
 	};
+
+	function getCurrentTabContent () {
+		let currentTabTitle = tabs[currentTabIndex]["title"];
+		if (currentTabTitle === "Notes") {
+			let noteItems = notes.map((note, i) => {
+				return <Note key={i} note={note} />;
+			});
+			return <div>
+				<h2>Notes</h2>
+				<div>{noteItems}</div>
+			</div>;
+		} else if (currentTabTitle === "Notebooks") {
+			let notebookItems = notebooks.map((notebook, i) => {
+				return <Notebook key={i} notebook={notebook} />;
+			});
+			return <div>
+				<h2>Notebooks</h2>
+				<div>{notebookItems}</div>
+			</div>;
+		}
+	}
 
 	return (
 		<div className="NoteApp bg-slate-100">
@@ -36,21 +49,7 @@ export default function NoteApp () {
 			<TopTabBar {...topTabBarProps} />
 
 			<main className="min-h-screen max-w-4xl mx-auto px-4 py-4">
-
-				<div>
-					<h2>Notebooks</h2>
-					<div>
-						{notebookItems}
-					</div>
-				</div>
-
-				<div>
-					<h2>Note</h2>
-					<div>
-						{noteItems}
-					</div>
-				</div>
-
+				{getCurrentTabContent()}
 			</main>
 
 			<Footer />
