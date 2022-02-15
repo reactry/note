@@ -1,8 +1,8 @@
 import React from 'react';
 
 import TopTabBar from './TopTabBar';
-import Note from './Note';
-import Notebook from './Notebook';
+import NotesTab from './NotesTab';
+import NotebooksTab from './NotebooksTab';
 import Footer from './Footer';
 
 const tabs = [
@@ -25,21 +25,15 @@ export default function NoteApp () {
 	function getCurrentTabContent () {
 		let currentTabTitle = tabs[currentTabIndex]["title"];
 		if (currentTabTitle === "Notes") {
-			let noteItems = notes.map((note, i) => {
-				return <Note key={i} note={note} />;
-			});
-			return <div>
-				<h2>Notes</h2>
-				<div>{noteItems}</div>
-			</div>;
+			let notesTabProps = {
+				notes
+			};
+			return <NotesTab {...notesTabProps} />;
 		} else if (currentTabTitle === "Notebooks") {
-			let notebookItems = notebooks.map((notebook, i) => {
-				return <Notebook key={i} notebook={notebook} />;
-			});
-			return <div>
-				<h2>Notebooks</h2>
-				<div>{notebookItems}</div>
-			</div>;
+			let notebooksTabProps = {
+				notebooks
+			};
+			return <NotebooksTab {...notebooksTabProps} />;
 		}
 	}
 
