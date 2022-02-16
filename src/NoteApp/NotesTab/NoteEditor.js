@@ -28,7 +28,10 @@ export default function NoteEditor ({
 				<Input x={title} setX={setTitle} />
 				<Textarea x={content} setX={setContent} />
 			</div>
-			<Button onClick={handleClick}>Add</Button>
+			<div>
+				<Button onClick={handleClick}>Add</Button>
+				<Button onClick={() => setShowEditor(false)}>Cancel</Button>
+			</div>
 		</div>
 	);
 }

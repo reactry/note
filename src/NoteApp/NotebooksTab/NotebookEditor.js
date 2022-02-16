@@ -28,7 +28,10 @@ export default function NotebookEditor ({
 				<Input x={title} setX={setTitle} />
 				<Textarea x={description} setX={setDescription} />
 			</div>
-			<Button onClick={handleClick}>Add</Button>
+			<div>
+				<Button onClick={handleClick}>Add</Button>
+				<Button onClick={() => setShowEditor(false)}>Cancel</Button>
+			</div>
 		</div>
 	);
 }

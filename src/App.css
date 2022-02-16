@@ -12,7 +12,7 @@ h3 {
 }
 
 h4 {
-	@apply text-xl py-2 font-bold;
+	@apply text-base py-2 font-bold;
 }
 
 p {
